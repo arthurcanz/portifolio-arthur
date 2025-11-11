@@ -1,0 +1,336 @@
+:root {
+  --background-color: #0e1117;
+  --card-color: #161b22;
+  --text-color: #e6edf3;
+  --subtext-color: #9ba3af;
+  --link-color: #58a6ff;
+  --border-color: #30363d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* LINKS */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: #79c0ff;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+nav .left a {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .right a {
+  color: var(--text-color);
+  margin: 0 10px;
+}
+
+nav .right a:last-child {
+  color: var(--background-color);
+  background-color: var(--link-color);
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+nav .right a:last-child:hover {
+  filter: brightness(1.2);
+}
+
+/* SECTION 1: Hero */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 80px 0 120px 0;
+  gap: 40px;
+}
+
+.hero-section .text {
+  flex: 5;
+}
+
+.hero-section .text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #f0f6fc;
+}
+
+.hero-section .text p {
+  color: var(--subtext-color);
+  line-height: 1.6;
+}
+
+.hero-section .text .links {
+  margin-top: 30px;
+}
+
+.hero-section .text .links a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1.5px solid var(--link-color);
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+
+.hero-section .text .links a:hover {
+  background-color: var(--link-color);
+  color: var(--background-color);
+}
+
+.hero-section .headshot {
+  flex: 2;
+  display: flex;
+  justify-content: right;
+}
+
+.hero-section .headshot img {
+  width: 320px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+}
+
+/* SECTION 2: Skills */
+.skills-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f0f6fc;
+}
+
+.skills-section .text {
+  color: var(--subtext-color);
+  margin-bottom: 25px;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 15px 25px;
+  margin: 10px;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+
+.skills-section .cells .cell:hover {
+  transform: translateY(-5px);
+  border-color: var(--link-color);
+}
+
+.skills-section .cells .cell img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+/* SECTION 3: testimony */
+.testimony-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.testimony-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #f0f6fc;
+}
+
+.testimony-section .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: var(--card-color);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.testimony-section .group .person-details {
+  text-align: center;
+  flex: 2;
+}
+
+.testimony-section .group .person-details img {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid var(--border-color);
+}
+
+.testimony-section .group .person-details p {
+  font-weight: 600;
+}
+
+.testimony-section .group .text {
+  flex: 8;
+  color: var(--subtext-color);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* SECTION 4: Contact */
+.contact-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f0f6fc;
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-section .group .text {
+  flex: 3;
+  color: var(--subtext-color);
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.contact-section .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  font-family: "Poppins", sans-serif;
+  border: 1.5px solid var(--border-color);
+  background-color: var(--card-color);
+  color: var(--text-color);
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+  border-color: var(--link-color);
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: var(--link-color);
+  border: none;
+  height: 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-section .group form button:hover {
+  filter: brightness(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .hero-section .text h2 {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 740px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-section .headshot img {
+    width: 280px;
+  }
+
+  .depoimentos-section .group {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-section .group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .hero-section,
+  .skills-section,
+  .depoimentos-section,
+  .contact-section {
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell {
+    width: 100%;
+  }
+}
