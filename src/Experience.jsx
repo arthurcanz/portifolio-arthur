@@ -29,7 +29,7 @@ export default function Experience() {
       overlayRef.current.style.display = "none"
       tl.to(nameRef.current.material,{duration:1, ease: "power4.out", opacity:0})
       tl.to(laptopRef.current.position, {duration: 1.5, ease: "power4.out", x: -1.7, y: -0.8, z: 2 }, "-=0.8")
-      tl.to(laptopRef.current.rotation, {duration: 1.5, ease: "power4.out", y: -0.7, z:0.05 }, "<")
+      tl.to(laptopRef.current.rotation, {duration: 1.5, ease: "power4.out", y: -0.7, z:0.075 }, "<")
       tl.to(btCloseRef.current,{duration:1.5,opacity:1}, "<")
       tl.play();
     }
